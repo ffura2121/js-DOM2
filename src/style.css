@@ -1,0 +1,160 @@
+/* Основний стиль для сторінки */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #333, #555);
+    background-size: cover;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #89cff0;
+    text-shadow: 0 0 5px rgba(137, 207, 240, 0.6), 0 0 10px rgba(137, 207, 240, 0.3);
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ccc;
+    margin: 10px 0 20px;
+    padding: 0 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стиль галереї */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Стиль кнопок керування */
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #458fd0, #3579b9);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.controls button:active {
+    transform: scale(0.98);
+    background: #3579b9;
+}
+
+/* Стиль для повноекранного режиму */
+.fullscreen-view {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen-view img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.fullscreen-view .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.fullscreen-view .close:hover {
+    color: #ff5e5e;
+}
+
+/* Кнопки навігації в повноекранному режимі */
+.fullscreen-view .nav {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.fullscreen-view .prev {
+    left: 20px;
+}
+
+.fullscreen-view .next {
+    right: 20px;
+}
+
+.fullscreen-view .nav:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Додатковий стиль для списків */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 5px;
+    color: #ddd;
+}
