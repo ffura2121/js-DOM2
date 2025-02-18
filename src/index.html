@@ -1,36 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея зображень</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Галерея фотографій</title>
 </head>
 <body>
     <header>
-        <h1>Галерея зображень</h1>
+        <h1>FOTO IMAGE</h1>
     </header>
-
     <main>
-        <section class="gallery-container">
-            <div class="gallery" id="gallery"></div>
-        </section>
-
-        <aside class="controls">
-            <button id="loadMore">Завантажити ще 4 зображення</button>
-            <button id="clear">Очистити галерею</button>
-            <button id="removeLast">Видалити останнє зображення</button>
-            <button id="reverse">Перевернути порядок</button>
-        </aside>
+        <div id="gallery" class="gallery"></div>
+        <div class="buttons">
+            <button id="loadMore">Завантажити ще 4 картинки</button>
+            <button id="clearGallery">Очистити галерею</button>
+            <button id="removeLast">Видалити останню картинку</button>
+            <button id="reverseGallery">Перевернути галерею</button>
+            <button id="shuffleGallery">Перемішати галерею</button>
+        </div>
     </main>
-
-    <div class="fullscreen-view" id="fullscreenView">
-        <span class="close" id="closeFullscreen">&times;</span>
-        <button class="nav prev" id="prev">&#10094;</button>
-        <img src="" alt="Перегляд зображення" id="fullscreenImage">
-        <button class="nav next" id="next">&#10095;</button>
-    </div>
-
-    <script src="script.js"></script>
+    <script type="module" src="/src/script.js"></script>
 </body>
 </html>
